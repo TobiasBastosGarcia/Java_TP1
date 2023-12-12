@@ -1,7 +1,7 @@
 package br.com.Project.Pack1;
 
 public class Somar {
-    public int soma (int a, int b){
+    public double soma (double a, double b){
         return a +b;
     }
 }

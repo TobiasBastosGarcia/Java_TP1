@@ -1,7 +1,7 @@
 package br.com.Project.Pack3;
 
 public class Multiplicar {
-    public int multiplica (int a, int b){
+    public double multiplica (double a, double b){
         return a*b;
     }
 }

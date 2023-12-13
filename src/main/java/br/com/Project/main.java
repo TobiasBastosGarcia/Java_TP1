@@ -7,8 +7,8 @@ import br.com.Project.Pack4.Dividir;
 
 public class main {
     public static void main(String[] args) {
-        double a = 10;
-        double b = 8;
+        double a = 100;
+        double b = 18;
 
         Somar som = new Somar();
         double resultado1 = som.soma(a,b);

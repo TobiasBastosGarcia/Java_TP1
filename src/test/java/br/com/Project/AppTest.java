@@ -1,38 +1,31 @@
 package br.com.Project;
 
-import junit.framework.Test;
+import br.com.Project.Pack1.Somar;
+import br.com.Project.Pack2.Subtrair;
+import br.com.Project.Pack4.Dividir;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
-/**
- * Unit test for simple App.
- */
-public class AppTest 
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
+import static org.junit.jupiter.api.Assertions.*;
+
+public class AppTest {
+    @Test
+    @DisplayName("Deve testar a soma de dois numeros")
+    public void testarSoma(){
+        Somar sum = new Somar();
+
+        assertEquals(4,sum.soma(2,2));
+    } @Test
+    @DisplayName("Deve testar a divisão de dois numeros ")
+    public void testarDiv(){
+       Dividir div = new Dividir();
+       assertEquals(1,div.divisao(3,3));
+        assertThrows(ArithmeticException.class, ()-> {
+            assertEquals(1,div.divisao(3,0));
+        });
+
     }
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
-    }
 }
